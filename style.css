@@ -1,0 +1,116 @@
+/*@media only screen and (max-width: 768px) {*/
+
+.contenedor {
+    width: 100%;
+    max-width: 768px;
+}
+
+.grupos {
+    text-align: center;
+}
+
+.titulo {
+    font-weight: 800;
+    font-size: 40px;
+    color: darkred;
+    text-shadow: 4px 4px grey;
+}
+
+.partido {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+
+}
+
+.equipo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    background-color: gainsboro;
+}
+
+label {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.local {
+    border-radius: 8px 0 0 8px;
+}
+
+.visitante {
+    border-radius: 0 8px 8px 0;
+}
+
+.visitante label {
+    right: 0;
+}
+
+#goles {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.local #goles {
+    margin-right: 8px;
+}
+
+.visitante #goles {
+    margin-left: 8px;
+}
+
+
+
+.nom-equipo {
+    margin: 0 16px;
+
+}
+
+
+.info{
+    font-size: 12px;
+    font-weight: 75;
+    color: grey;
+    margin: 8px 0 32px 0;
+}
+
+
+.calcular {
+    margin: 0 auto;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*}*/
