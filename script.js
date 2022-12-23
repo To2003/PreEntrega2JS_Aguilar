@@ -1,40 +1,57 @@
-// FUNCTION PAISES //
-function paises(nombre, bestPlayer, captain, dt, worldCups, lastVictory) {
-    this.nombre = nombre,
-    this.bestPlayer = bestPlayer,
-    this.captain = captain,
-    this.dt = dt,
-    this.worldCups = worldCups,
-    this.lastVictory = lastVictory
-}
+// ARRAY PAISES //
+const teams = [
+    {
+        name: "Arabia Saudita",
+        tdescription: [
+            {bestPlayer: "Mohammed Al Owais", captain: "Salman Al-Faraj", dt: "Hervé Renard", worldCups: "0", lastVictory: "Mejor resultado: Octavos de final 1994"}
+        ],
+    },
+    {    name: "Argentina",
+        tdescription: [
+            {bestPlayer: "Lionel Andres Messi", captain: "Lionel Andres Messi", dt: "Lionel Scaloni", worldCups: "2", lastVictory: "1986"}
+        ],
+    },
+    {    name: "Polonia",
+        tdescription: [
+            {bestPlayer: "Robert Lewandowski", captain: "Robert Lewandowski", dt: "Czesław Michniewicz", worldCups: "0", lastVictory: "Mejor resultado: Tercer puesto (1974 y 11982)"}
+        ],
+    },
+    {    name: "Mexico",
+        tdescription: [
+            {bestPlayer: "Edson Álvarez", captain: "Guillermo Ochoa", dt: "Gerardo Martino", worldCups: "0", lastVictory: "Mejor resultado: Cuartos de final (1970 y 1986)"}
+        ],
+    }
+];
 
-const arabia = new paises ("Arabia Saudita", "Mohammed Al Owais", "Salman Al-Faraj", "Hervé Renard", "0", "Mejor resultado: Octavos de final 1994");
-
-const argentina = new paises ("Argentina", "Lionel Andres Messi", "Lionel Andres Messi", "Lionel Scaloni", "2", "1986");
-
-const polonia = new paises ("Polonia", "Robert Lewandowski", "Robert Lewandowski", "Czesław Michniewicz", "0", "Mejor resultado: Tercer puesto (1974 y 11982)");
-
-const mexico = new paises ("Mexico", "Edson Álvarez", "Guillermo Ochoa", "Gerardo Martino", "0", "Mejor resultado: Cuartos de final (1970 y 1986)");
-
-// FUNCTION PARTIDOS //
-
-function partidos(lugar, fecha, hora) {
-    this.lugar = lugar,
-    this.fecha = fecha,
-    this.hora = hora
-}
-
-const primerPartido = new partidos ("Est. Icónico, Lusail", "Martes 22 de Noviembre (22/11/2022)", "08:00hs UTC");
-
-const segundoPartido = new partidos ("Est. 974, Doha", "Martes 22 de Noviembre (22/11/2022)", "14:00hs UTC");
-
-const tercerPartido = new partidos ("Est. de la Educación, Rayán", "Sabado 26 de Noviembre (26/11/2022)", "11:00hs UTC");
-
-const cuartoPartido = new partidos ("Est. Icónico, Lusail", "Sabado 26 de Noviembre (26/11/2022)", "17:00hs UTC");
-
-const quintoPartido = new partidos ("Est. 974, Doha", "Miércoles 30 de Noviembre (30/11/2022)", "17:00hs UTC");
-
-const sextoPartido = new partidos ("Est. Icónico, Lusail", "Miércoles 30 de Noviembre (30/11/2022)", "17:00hs UTC");
+// ARRAY PARTIDOS //
+let partidos = [
+    {
+        name: "Primer Partido",
+        pdescription:[
+            {lugar: "Est. Icónico, Lusail", fecha: "Martes 22 de Noviembre (22/11/2022)", hora: "08:00hs UTC"},
+        ],
+        name: "Segundo Partido",
+        pdescription:[
+            {lugar: "Est. 974, Doha", fecha: "Martes 22 de Noviembre (22/11/2022)", hora: "14:00hs UTC"}
+        ],
+        name: "Tercer Partido",
+        pdescription: [
+            {lugar: "Est. de la Educación, Rayán", fecha: "Sabado 26 de Noviembre (26/11/2022)", hora: "11:00hs UTC"}
+        ],
+        name: "Cuarto Partido",
+        pdescription: [
+            {lugar: "Est. Icónico, Lusail", fecha: "Sabado 26 de Noviembre (26/11/2022)", hora: "17:00hs UTC"}
+        ],
+        name: "Quinto Partido",
+        pdescription: [
+            {lugar: "Est. 974, Doha", fecha: "Miércoles 30 de Noviembre (30/11/2022)", hora: "17:00hs UTC"}
+        ],
+        name: "Sexto Partido",
+        pdescription: [
+            {lugar: "Est. Icónico, Lusail", fecha: "Miércoles 30 de Noviembre (30/11/2022)", hora: "17:00hs UTC"}
+        ],
+    }
+];
 
 // VARIABLES PUNTOS //
 
@@ -67,26 +84,19 @@ while (password != "1446") {
 }
 alert ("Bienvenido " +nombreUsuario+" Al sistema de fixture qatar 2022!!");
 
-let infoPaises = prompt ("Antes de comenzar desea ver informacion sobre los participantes? \n(escriba el nombre completo en minusculas sin tildes de la seleccion de la cual desea su informacion) \n(0 para continuar)");
+// JSON.stringify //
 
-if (infoPaises = "argentina") {
-    return alert (JSON.stringify(argentina));
+/*let infoPaises = prompt ("Antes de comenzar desea ver informacion sobre los participantes? \n(escriba Y para confirmar o N para continuar");
+
+if (infoPaises = "Y" || "y") {
+    alert (JSON.stringify(teams))
 }
-
-else if (infoPaises = "arabia") {
-    return alert(JSON.stringify(arabia));
-}
-
-else if (infoPaises = "polonia") {
-    return alert(JSON.stringify(polonia));
-}
-
-else if (infoPaises = "mexico") {
-    return alert(JSON.stringify(mexico));
+else if (infoPaises = "N" || "n"){
+    alert ("Empecemos!!")
 }
 else {
-    alert ("Error! La informacion ingresada no es correcta. Procede a continuar");
-}
+    alert ("Ha ocurrido un error")
+}*/
 
 alert ("Juega conmigo: Vamos a calcular la posicion al finalizar la fase de grupos de cada seleccion eligiendo cuantos goles hace cada una de ellas!!!" + "\n" + "Empecemos!!"); 
 
@@ -260,9 +270,11 @@ tablaPosiciones()
     
     //Segundo Lugar
 
-    let segundoLugar = prompt("Escriba solo en minusculas y sin acentos.\nQuien crees que deberia ser merecedor del segundo lugar?\n(0 para cancelar)");
+    let segundoLugar = prompt("Escriba sin tildes.\nQuien crees que deberia ser merecedor del segundo lugar?\n(0 para cancelar)");
+    segundoLugar = text.toLowerCase();
 
         if (segundoLugar == "argentina"){
+
             alert("Segundo lugar a pedido del publico es Argentina!!");
             segundoLugar = "Argentina";
         }
@@ -283,3 +295,29 @@ tablaPosiciones()
         }
 
 alert("Felicitaciones los ganadores son "+primerLugar+" en primer lugar y "+segundoLugar+" En segundo lugar");
+
+let infoFinal = prompt ("Habiendo finalizado el Quiz, desea ver mas informacion sobre los paises? (Y para aceptar / N para finalizar / informacion en el console.log)")
+
+if (infoFinal == "Y" || "y") {
+    const infoPaises = teams.map(teams => {
+        return {
+            name: teams.name,
+            description: teams.tdescription
+        }
+        }
+    
+    );
+    
+    console.log(infoPaises); 
+}
+else if (infoFinal == "N" || "n") {
+    alert ("Muchas gracias por participar!!!")
+}
+else {
+    alert("Se ha producido un error o los datos ingresados no son validos. Gracias por participar!!")
+}
+
+
+/* de alguna manera tenes q filtrar para q te muestre los datos de algun equipo para q no te muestre todo
+sino podes hacer un foreach y que te muestre 4 alerts distintos con los datos de cada equipo
+podrias tener un select en el dom con los nombres de los equipos y q cuando apretes en un boton q sea ver datos… te haga un find del value del select con el nombre del team y ahi con ese team que te encontro podes mostrarlo */
